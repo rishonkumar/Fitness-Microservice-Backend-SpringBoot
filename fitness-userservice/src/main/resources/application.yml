@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: userservice
+  datasource:
+    url: jdbc:mysql://localhost:3306/fitness_user_db
+    username: root
+    password: rishon2000
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+
