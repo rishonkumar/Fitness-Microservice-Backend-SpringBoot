@@ -21,7 +21,16 @@ public class ActivityService {
     @Autowired
     private final ActivityReposistory activityReposistory;
 
+    @Autowired
+    private final UserValidationService userValidationService;
+
     public ActivityResponse trackActivity(ActivityRequest activityRequest) {
+
+        boolean isValidUser = userValidationService.vaidateUser(activityRequest.getUserId());
+
+        if(!isValidUser) {
+            throw new RuntimeException("Invalid User : " + activityRequest.getUserId());
+        }
 
         Activity activity = Activity.builder()
                 .userId(activityRequest.getUserId())
