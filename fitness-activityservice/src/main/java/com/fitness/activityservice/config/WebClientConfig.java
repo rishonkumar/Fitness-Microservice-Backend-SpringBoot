@@ -4,7 +4,11 @@ import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.reactive.function.client.WebClient;
-
+/*
+The WebClientConfig sets up a WebClient to talk to another microservice called USER-SERVICE.
+The @LoadBalanced annotation suggests this is part of a microservices ecosystem with service
+ discovery (e.g., Spring Cloud Netflix Eureka).
+ */
 @Configuration
 public class WebClientConfig {
 
