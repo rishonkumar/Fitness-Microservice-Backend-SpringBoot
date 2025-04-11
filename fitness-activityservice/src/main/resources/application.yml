@@ -1,10 +1,10 @@
 spring:
   application:
     name : activity-service
-  data:
-    mongodb:
-      uri : mongodb://localhost:27017/
-      database : fitness-activity
+    data:
+      mongodb:
+        uri : mongodb://localhost:27017/
+        database : fitness-activity
 
 server:
   port : 8082
@@ -12,6 +12,6 @@ server:
 eureka:
   client:
     serviceUrl :
-      defaultZone : http://localhost:8083/eureka
+      defaultZone : http://localhost:8761/eureka
 
 
